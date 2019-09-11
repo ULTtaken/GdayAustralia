@@ -1,0 +1,83 @@
+<html lang='en'>
+<head>
+	<title>G'Day Australia</title>
+	<meta charset='utf-8'>
+	<link rel='stylesheet' href='assets/css/animate.css'>
+	<link rel='stylesheet' href='assets/css/main.css'>
+	<link rel='stylesheet' href='assets/css/aos.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuVNf2TV4Z2dFfoCZaiCISIR1wpF7byjA&callback=initMap"></script>
+	<script src='assets/js/tween.js'></script>
+	<script src='assets/js/vue_2.2.4.js'></script>
+	<script src='assets/js/prototype.js'></script>
+	<script src='assets/js/map.js'></script>
+	<script src='assets/js/aos.js'></script>
+</head>
+<body class='docs'>
+	<div class='page_container'>
+	<div id='header' class='sideHeader'>
+		<div style='font-weight:bold;margin-top:-15px;margin-left:-30px;font-family: cute;max-width: 200px'>
+			<a href="Australia.html" style='text-decoration: none;margin-top:-20px;display: block;'><p style="color:#4d4d4d;">G'Day</p><p style="margin-top: -1em;color:#4d4d4d;">Australia</p></a>
+		</div>
+		<ul class='nav' style="color: black;margin-top:-55px;font-weight: 500">
+					<li><a href='prepare.html' class='nav-link' style='color:black'>Preparation</a></li>
+					<li><a href="doanddonts.html" class='nav-link' style='color:black'>do's and don'ts</a></li>
+					<li><a href='rental.html' class='nav-link nav_active' style='color:black'>Renting</a>
+	<!-- 		<li class='resource'>
+				<a class='nav-link'>Resource</a>
+				<span class='arrow'></span>
+				<ul class='nav-dropdown'>
+					<li><a href="#"></a>
+					<li><a href='#'></a>
+				</ul>
+			</li>
+			<li class='contact'>
+				<a class='nav-link'>Contact us</a>
+			</li> -->
+		</ul>
+	</div>
+	<div class="container">
+			<p class='article_header' style="text-align: center;font-family: nyt-imperial,georgia,'times new roman',times,serif;" data-aos='fade-up' data-aos-duration="1000">Rent search by suburb name</p>
+			<div class='mapcontainer'>
+				<div class='conditionpick'>
+					<p class='discription' data-aos='fade-up' data-aos-duration="1000" data-aos-delay="300">Room type: </p>
+					<div class='selectiontype' style='position: relative;' data-aos='fade-up' data-aos-duration="1000" data-aos-delay="300">
+						<img class='firstarrowimg' src='assets/img/arrowimg.png' />
+						<select id='roomtype'>
+							<option value="flat">Flat</option>
+							<option value="house">House</option>
+						</select>
+					</div>
+					<div class='roomnumber' data-aos='fade-up' data-aos-duration="1000" data-aos-delay="300">
+						<p class='discription'>Bedroom number required: </p>
+						<label class="containerbox">One
+						  	<input type="radio" checked="checked" name="radio" value='1'>
+						  	<span class="checkmark" id='specialradio'></span>
+						</label>
+						<label class="containerbox">Two
+						  	<input type="radio" name="radio" value='2'>
+						  	<span class="checkmark"></span>
+						</label>
+						<label class="containerbox">Three
+						  	<input type="radio" name="radio" value='3'>
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+				<div class='formInput'>
+					<input type='text' id='where' placeholder="Input the suburb name">
+					<img class='arrowimg' src='assets/img/arrowimg.png' />
+					<div class="dropdownBox">
+						<ul id="suggestionBar">
+							<li>expamples</li>
+						</ul>
+					</div>
+					<div class='searchButton' id='searchB'>Search</div>
+				</div>
+				<div class='googlemap' data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="500">
+    				<div id="map"></div>
+    			</div>
+    		</div>
+	</div>
+</body>
+</html>
